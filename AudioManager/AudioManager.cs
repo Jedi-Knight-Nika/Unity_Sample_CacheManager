@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Nikoll_L
+namespace Nikolla_L
 {
     public class AudioManager : MonoBehaviour
     {
