@@ -27,7 +27,6 @@ namespace Nikolla_L
             CACHE_STORAGE.Add(go);
         }
 
-
         /// <summary>
         /// Determines whether this instance has unused cache items
         /// </summary>
@@ -65,7 +64,6 @@ namespace Nikolla_L
 
             return null;
         }
-
 
         /// <summary>
         /// Count the amount of stored gameObjects
