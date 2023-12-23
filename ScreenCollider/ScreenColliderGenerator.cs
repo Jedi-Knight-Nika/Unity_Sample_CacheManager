@@ -3,10 +3,12 @@ using UnityEngine;
 /// <summary>
 /// Generates colliders around the screen edges at the start of the scene
 /// </summary>
-public class ScreenColliderGenerator : MonoBehaviour
+namespace Nikolla_L
 {
-    void Start()
+    public class ScreenColliderGenerator : MonoBehaviour
     {
+        void Start()
+        {
             Vector2 lDCorner = GetComponent<Camera>().ViewportToWorldPoint(new Vector3(0, 0f, GetComponent<Camera>().nearClipPlane));
             Vector2 rUCorner = GetComponent<Camera>().ViewportToWorldPoint(new Vector3(1f, 1f, GetComponent<Camera>().nearClipPlane));
             Vector2[] colliderpoints;
@@ -35,5 +37,6 @@ public class ScreenColliderGenerator : MonoBehaviour
             colliderpoints[0] = new Vector2(rUCorner.x, rUCorner.y);
             colliderpoints[1] = new Vector2(rUCorner.x, lDCorner.y);
             rightEdge.points = colliderpoints;
+        }
     }
 }
