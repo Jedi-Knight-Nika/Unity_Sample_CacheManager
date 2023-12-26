@@ -30,7 +30,7 @@ public class AttachGameObjects : EditorWindow
     {
         GameObject targetGameObject = GameObject.Find(targetName);
 
-        CleanUpCharacters script = targetGameObject?.GetComponent<CleanUpCharacters>();
+        MonoBehaviourScript script = targetGameObject?.GetComponent<MonoBehaviourScript>();
 
         if (script != null)
         {
@@ -48,7 +48,7 @@ public class AttachGameObjects : EditorWindow
         }
         else
         {
-            Debug.LogError($"CleanUpCharacters script not found on the GameObject '{targetName}'.");
+            Debug.LogError($"MonoBehaviourScript script not found on the GameObject '{targetName}'.");
         }
     }
 }
