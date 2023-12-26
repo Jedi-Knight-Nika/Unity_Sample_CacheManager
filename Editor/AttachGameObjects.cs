@@ -38,13 +38,12 @@ public class AttachGameObjects : EditorWindow
                                             .Where(obj => obj.name.Contains(searchStr))
                                             .ToArray();
 
-            // Append new objects to existing array (if needed)
             List<GameObject> currentObjects = new List<GameObject>(script.gunshotWounds ?? new GameObject[0]);
             currentObjects.AddRange(objectsToAttach);
 
             script.gunshotWounds = currentObjects.ToArray();
 
-            EditorUtility.SetDirty(script); // Mark the script as dirty so the changes are saved
+            EditorUtility.SetDirty(script);
         }
         else
         {
